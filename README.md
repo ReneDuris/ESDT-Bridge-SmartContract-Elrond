@@ -1,7 +1,3 @@
-# 
-Bridge ESDT for another ESDT with adjustable ratio
-
-
 # ESDT-Bridge-SmartContract-Elrond
 Bridge between two ESDT with adjustable ratio.
 
