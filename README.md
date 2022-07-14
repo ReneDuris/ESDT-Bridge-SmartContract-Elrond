@@ -61,8 +61,8 @@ Upon deployement or while ugrading you have to set your arguments.
 ```
 "2"
 ```
+- #### Note:  The swap ratio between TOKEN_1 and TOKEN_2 will be 1:2. Meaning that you will be swapping 10 of TOKEN_1 for 20 of TOKEN_2
 ```
-Note: The swap ratio between TOKEN_1 and TOKEN_2 will be 1:2. Meaning that you will be swapping 10 of TOKEN_1 for 20 of TOKEN_2
   #[init]
     fn init(
         &self,
