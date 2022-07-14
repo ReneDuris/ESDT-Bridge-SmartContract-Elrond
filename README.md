@@ -61,6 +61,7 @@ Upon deployement or while ugrading you have to set your arguments.
 ```
 "2"
 ```
+```
   #[init]
     fn init(
         &self,
