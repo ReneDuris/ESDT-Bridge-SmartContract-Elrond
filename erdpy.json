@@ -1,0 +1,27 @@
+{
+    "configurations": {
+        "default": {
+            "proxy": "https://devnet-api.elrond.com",
+            "chainID": "D"
+        }
+    },
+    "contract":{
+        "deploy":{
+            "verbose": true,
+            "bytecode": "output/bridge.wasm",
+            "recall-nonce": true,
+            "pem": "../wallet.pem",
+            "gas-limit": 60000000,
+            "arguments": [
+                "str:DSUPER-9af8df", 
+                "1000000000000000000",
+                "str:EFOO-8e80a5"
+            ],
+            "send": true,
+            "outfile": "bridge.json",
+            "metadata-payable": true
+        }
+     }
+}
+
+

@@ -1,0 +1,102 @@
+{
+    "buildInfo": {
+        "rustc": {
+            "version": "1.64.0-nightly",
+            "commitHash": "ddcbba036aee08f0709f98a92a342a278eae5c05",
+            "commitDate": "2022-06-29",
+            "channel": "Nightly",
+            "short": "rustc 1.64.0-nightly (ddcbba036 2022-06-29)"
+        },
+        "contractCrate": {
+            "name": "bridge",
+            "version": "1.0.0",
+            "git_version": "5c6ae7f-modified"
+        },
+        "framework": {
+            "name": "elrond-wasm",
+            "version": "0.33.1"
+        }
+    },
+    "name": "Bridge",
+    "constructor": {
+        "inputs": [
+            {
+                "name": "provided_token",
+                "type": "EgldOrEsdtTokenIdentifier"
+            },
+            {
+                "name": "provided_token_decimals",
+                "type": "u32"
+            },
+            {
+                "name": "ratio_provided",
+                "type": "u32"
+            },
+            {
+                "name": "minimum_swap_amount",
+                "type": "BigUint"
+            },
+            {
+                "name": "swap_token",
+                "type": "EgldOrEsdtTokenIdentifier"
+            },
+            {
+                "name": "swap_token_decimals",
+                "type": "u32"
+            },
+            {
+                "name": "ratio_swap",
+                "type": "u32"
+            }
+        ],
+        "outputs": []
+    },
+    "endpoints": [
+        {
+            "name": "supplyToken",
+            "onlyOwner": true,
+            "mutability": "mutable",
+            "payableInTokens": [
+                "*"
+            ],
+            "inputs": [],
+            "outputs": []
+        },
+        {
+            "name": "withdrawProvidedToken",
+            "onlyOwner": true,
+            "mutability": "mutable",
+            "inputs": [
+                {
+                    "name": "withdraw_provided_amount",
+                    "type": "BigUint"
+                }
+            ],
+            "outputs": []
+        },
+        {
+            "name": "withdrawSwapToken",
+            "onlyOwner": true,
+            "mutability": "mutable",
+            "inputs": [
+                {
+                    "name": "withdraw_swap_amount",
+                    "type": "BigUint"
+                }
+            ],
+            "outputs": []
+        },
+        {
+            "name": "beginSwap",
+            "mutability": "mutable",
+            "payableInTokens": [
+                "*"
+            ],
+            "inputs": [],
+            "outputs": []
+        }
+    ],
+    "events": [],
+    "hasCallback": false,
+    "types": {}
+}
