@@ -13,13 +13,17 @@
             "pem": "../wallet.pem",
             "gas-limit": 60000000,
             "arguments": [
-                "str:DSUPER-9af8df", 
+                "str:DSUPER-9af8df",
+                "18",
+                "1"
                 "1000000000000000000",
-                "str:EFOO-8e80a5"
+                "str:EFOO-8e80a5",
+                "18",
+                "2"
             ],
             "send": true,
             "outfile": "bridge.json",
-            "metadata-payable": true
+            "metadata-payable": false
         }
      }
 }
