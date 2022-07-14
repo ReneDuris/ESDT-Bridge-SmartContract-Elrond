@@ -77,8 +77,7 @@ pub trait Bridge{
         let ratio_swap = self.ratio_swap().get();
         let provided_ratio = self.ratio_provided().get();
         let decimal = BigUint::from(DEC);
-        let real_amount = payment_amount / decimal.pow(swap_decimals);
-        let new_amount = BigUint::from(ratio_swap) * real_amount * decimal.pow(provided_decimals)/BigUint::from(provided_ratio);
+        let new_amount = BigUint::from(ratio_swap) * payment_amount * decimal.pow(provided_decimals)/BigUint::from(provided_ratio)/decimal.pow(swap_decimals);
         return new_amount;
        
         
